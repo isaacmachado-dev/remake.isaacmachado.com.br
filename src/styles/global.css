@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@fontsource/mea-culpa";
+
+@theme {
+  --font-logo: "Mea Culpa", cursive;
+  --color-primary: #100d1a;
+  --color-secondary: #1b1820;
+  --color-neutral-strong: #d9d9d9;
+}
+

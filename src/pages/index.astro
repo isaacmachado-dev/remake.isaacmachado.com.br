@@ -1,17 +1,32 @@
 ---
-
+import { Image } from "astro:assets";
+import icon from "../../public/favicon.svg";
+import '../styles/global.css';
 ---
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favfavicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+   
+        <title>Isaac Machado</title>
+    </head>
+    <body class="bg-primary text-white p-8 min-h-screen">
+        
+        <div class="inline-flex flex-row gap-2 items-center">
+            <Image 
+                src={icon} 
+                alt="Isaac Logo" 
+                width="60"
+                height="56"
+                class="w-[60px] h-auto" 
+            />
+            <span class="font-logo text-5xl text-neutral-strong select-none leading-none">
+                saac
+            </span>
+        </div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    </body>
 </html>
