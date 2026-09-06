@@ -1,83 +1,19 @@
 ---
-import { Image } from "astro:assets";
-import Icon from "../../public/favicon.svg";
-import Isaac from "../../public/isaac.png";
+import Hero from "../sections/hero/Hero.astro";
+import Skills from "../sections/skills/Skills.astro";
 import '../styles/global.css';
-
 ---
 <html lang="pt-BR">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favfavicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-   
-        <title>Isaac Machado</title>
-    </head>
-    <body class="bg-primary text-white p-8 min-h-screen">
-        
-        <div class="inline-flex flex-row gap-2 items-center">
-            <Image 
-                src={Icon} 
-                alt="Isaac Logo" 
-                width="60"
-                height="56"
-                class="w-[60px] h-auto" 
-            />
-            <span class="font-logo text-5xl text-neutral-strong select-none leading-none">
-                saac
-            </span>
-        </div>
-
-		<div class="flex flex-row">
-
-			<div class="mt-40 flex flex-col gap-4">
-				<span class="text-semibold font-bold">
-					01/
-				</span>
-				
-				<span class="text-6xl font-bold">
-					Full-Stack Developer
-				</span>
-
-				<div class="flex flex-row gap-4 ml-10">
-					<button class="bg-white w-fit text-primary py-2 px-4 rounded-md transition-colors font-semibold">
-						Conversar comigo
-					</button>
-
-					<button class="font-semibold">
-						Visualizar projetos
-					</button>
-				</div>
-					
-				<div class="mt-20 flex flex-row gap-4">
-					<div class="bg-white p-20 w-fit rounded-md">
-						
-					</div>
-
-					<div class="bg-white p-20 w-fit rounded-md">
-						
-					</div>
-
-					<div class="bg-white p-20 w-fit rounded-md">
-						
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<Image 
-					src={Isaac} 
-					alt="Isaac Logo" 
-					width="600"
-					height="700"
-					class="-mt-10"
-				/>
-			</div>
-
-		</div>
-		
-
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Isaac Macha  do — Full-Stack Developer</title>
+  </head>
+  <body class="bg-primary text-white antialiased">
+    <Hero />
+    <Skills />
+  </body>
 </html>

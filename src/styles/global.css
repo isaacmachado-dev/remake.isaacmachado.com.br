@@ -1,10 +1,51 @@
 @import "tailwindcss";
 @import "@fontsource/mea-culpa";
+@import "@fontsource/geist-sans";
+@import "@fontsource/geist-mono";
+@import "@fontsource/inter";
+@import "@fontsource/gothic-a1";
 
 @theme {
   --font-logo: "Mea Culpa", cursive;
+  --font-display: "Inter", sans-serif;
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-gothic: "Gothic A1", sans-serif;
+
   --color-primary: #100d1a;
   --color-secondary: #1b1820;
+  --color-tertiary: #ffffff;
+  --color-neutral: #d5d5d5;
   --color-neutral-strong: #d9d9d9;
+  --color-muted: #969393;
+  --color-ink: #0c0b0c;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 20px;
+  --radius-xl: 48px;
+  --radius-2xl: 66px;
+  --radius-pill: 70px;
 }
 
+html,
+body {
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-gothic {
+  font-family: var(--font-gothic);
+}
+.font-logo {
+  font-family: var(--font-logo);
+}
+
+.hero-tilt {
+  transform: rotate(31.07deg);
+}
