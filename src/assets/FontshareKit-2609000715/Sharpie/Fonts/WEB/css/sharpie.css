@@ -1,0 +1,22 @@
+/**
+* @license
+*
+* Font Family: Sharpie
+* Designed by: Théo Guillard
+* URL: https://www.fontshare.com/fonts/sharpie
+* © 2026 Indian Type Foundry
+*
+* Sharpie Extrabold 
+
+*
+*/
+@font-face {
+  font-family: 'Sharpie-Extrabold';
+  src: url('../fonts/Sharpie-Extrabold.woff2') format('woff2'),
+       url('../fonts/Sharpie-Extrabold.woff') format('woff'),
+       url('../fonts/Sharpie-Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+

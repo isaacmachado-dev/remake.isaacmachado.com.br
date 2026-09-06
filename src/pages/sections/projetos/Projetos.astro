@@ -1,13 +1,34 @@
+---
+import ProjectPuppyCare from "@/assets/projetos/parque-dos-bufalos.png";
+import { Image } from "astro:assets";
+---
+
 <section class="min-h-screen p-8">
 
     <div class="flex flex-col ml-[4.27%]">
-        <p class="z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase ">
-            03/
+        <p class="z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase text-neutral font-kabel">
+            02/
         </p>
         
-        <h2 class="font-display text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap">
-            Projetos
-        </h2>
+        <div class="flex flex flex-row gap-4">
+            <h2 class="font-display text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap font-kabel">
+                Projetos
+            </h2>
+            <span class="bg-white w-[80%] h-1 my-auto"></span>
+        </div>
+    </div>
+
+    <div class="bg-white p-10 rounded-3xl mt-10 w-fit">
+        <Image 
+            src={ProjectPuppyCare}
+            alt=""
+            width={720}
+            height={360}
+        />
+
+        <span class="text-black">
+            Parque dos Bufalos
+        </span>
 
     </div>
 

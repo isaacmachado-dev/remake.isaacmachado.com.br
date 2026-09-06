@@ -29,11 +29,11 @@ import { Image } from "astro:assets";
   <!-- ===== Desktop: canvas absoluto (posições = artboard 1920x1080) ===== -->
   <main class="absolute inset-0 hidden lg:block">
     <!-- 01/ — (82, 439) -->
-    <p class="absolute left-[4.27%] top-[40.65%] z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase">
+    <p class="absolute left-[4.27%] top-[40.65%] z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase font-ranade text-neutral">
       01/
     </p>
 
-    <h1 class="absolute left-[4.27%] top-[42.3%] z-20 font-display text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap">
+    <h1 class="absolute left-[4.27%] top-[42.3%] z-20 font-kabel text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap">
       Full-Stack Developer
     </h1>
 
@@ -50,7 +50,8 @@ import { Image } from "astro:assets";
       </a>
     </div>
 
-    <a href="#sobre" class="absolute left-[55%] top-[60%] z-20 text-[clamp(1.125rem,1.25vw,1.5rem)] font-semibold whitespace-nowrap">
+
+    <a href="#sobre" class="absolute left-[55%] top-[60%] z-20 text-[clamp(1.125rem,1.25vw,1.5rem)] font-semibold whitespace-nowrap font-kabel">
       Quem eu sou?
     </a>
 
@@ -93,8 +94,8 @@ import { Image } from "astro:assets";
 
   <!-- ===== Mobile: fluxo empilhado ===== -->
   <main class="flex flex-col px-6 pt-8 lg:hidden">
-    <p class="text-xs font-semibold tracking-[0.08em] uppercase">01/</p>
-    <h1 class="mt-4 font-display text-[2.5rem] leading-[1.2] font-bold tracking-[-0.03em]">
+    <p class="text-xs font-semibold tracking-[0.08em] uppercase font-kabel text-neutral">01/</p>
+    <h1 class="mt-4 font-kabel text-[2.5rem] leading-[1.2] font-bold tracking-[-0.03em] uppercase">
       Full-Stack Developer
     </h1>
     <div class="mt-8 flex flex-wrap items-center gap-4">
@@ -108,7 +109,7 @@ import { Image } from "astro:assets";
         Visualizar projetos
       </a>
     </div>
-    <a href="#sobre" class="mt-4 text-lg font-semibold">Quem eu sou?</a>
+    <a href="#sobre" class="mt-4 text-lg font-semibold font-kabel">Quem eu sou?</a>
 
     <div class="relative mx-auto mt-8 aspect-[744/895] w-full max-w-md overflow-hidden rounded-[20px]">
       <Image

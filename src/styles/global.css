@@ -5,12 +5,23 @@
 @import "@fontsource/inter";
 @import "@fontsource/gothic-a1";
 
+@font-face {
+  font-family: 'Kabel';
+  src: url('@/assets/fonts/kabel.ttf') format('truetype');
+  font-weight: normal; /* ou o peso da fonte, ex: bold / 700 */
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-logo: "Mea Culpa", cursive;
   --font-display: "Inter", sans-serif;
   --font-sans: "Geist", sans-serif;
   --font-mono: "Geist Mono", monospace;
   --font-gothic: "Gothic A1", sans-serif;
+  --font-ranade: 'Ranade', sans-serif;
+  --font-sharpie: 'Sharpie', sans-serif;
+  --font-kabel: 'Kabel', sans-serif;
 
   --color-primary: #100d1a;
   --color-secondary: #1b1820;
@@ -42,8 +53,13 @@ body {
 .font-gothic {
   font-family: var(--font-gothic);
 }
+
 .font-logo {
   font-family: var(--font-logo);
+}
+
+.font-ranade {
+  font-family: var(--font-ranade);
 }
 
 .hero-tilt {
