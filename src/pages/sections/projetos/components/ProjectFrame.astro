@@ -1,0 +1,41 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  imageSrc: ImageMetadata;
+  alt: string;
+  width?: number;
+  height?: number;
+}
+
+const { imageSrc, alt, width = 720, height = 360 } = Astro.props;
+---
+
+<!-- h-fit garante que a moldura nunca estique verticalmente com a abertura dos accordions -->
+<div class="relative w-fit h-fit p-6 mt-10">
+  <div>
+    <!-- Canto Superior Esquerdo -->
+    <span class="absolute top-0 left-0 w-8 h-8 border-t-8 border-l-8 border-white pointer-events-none"></span>
+
+    <!-- Canto Superior Direito -->
+    <span class="absolute top-0 right-0 w-8 h-8 border-t-8 border-r-8 border-white pointer-events-none"></span>
+
+    <!-- Canto Inferior Esquerdo -->
+    <span class="absolute bottom-0 left-0 w-8 h-8 border-b-8 border-l-8 border-white pointer-events-none"></span>
+
+    <!-- Canto Inferior Direito -->
+    <span class="absolute bottom-0 right-0 w-8 h-8 border-b-8 border-r-8 border-white pointer-events-none"></span>
+
+    <!-- Imagem -->
+    <div class="overflow-hidden">
+      <Image 
+        src={imageSrc}
+        alt={alt}
+        width={width}
+        height={height}
+        class="block"
+      />
+    </div>
+  </div>
+</div>

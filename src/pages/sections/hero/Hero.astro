@@ -28,12 +28,11 @@ import { Image } from "astro:assets";
 
   <!-- ===== Desktop: canvas absoluto (posições = artboard 1920x1080) ===== -->
   <main class="absolute inset-0 hidden lg:block">
-    <!-- 01/ — (82, 439) -->
-    <p class="absolute left-[4.27%] top-[40.65%] z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase font-ranade text-neutral">
+    <p class="absolute left-[4.27%] top-[40.65%] z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase font-space-mono text-neutral">
       01/
     </p>
 
-    <h1 class="absolute left-[4.27%] top-[42.3%] z-20 font-kabel text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap">
+    <h1 class="absolute left-[4.27%] top-[42.3%] z-20  text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap font-kabel">
       Full-Stack Developer
     </h1>
 
@@ -41,11 +40,11 @@ import { Image } from "astro:assets";
     <div class="absolute left-[7%] top-[52.9%] z-20 flex items-center gap-1">
       <a
         href="#contato"
-        class="inline-flex h-[clamp(48px,5.56vh,60px)] items-center justify-center rounded-[12px] bg-tertiary text-[clamp(1.125rem,1.25vw,1.5rem)] font-semibold text-ink transition-colors hover:bg-neutral-strong px-8 py-4"
+        class="inline-flex h-[clamp(48px,5.56vh,60px)] items-center justify-center rounded-[12px] bg-tertiary text-[clamp(1.125rem,1.25vw,1.5rem)]  text-ink transition-colors hover:bg-neutral-strong px-8 py-4 font-kabel"
       >
         Conversar comigo
       </a>
-      <a href="#projetos" class="text-[clamp(1.125rem,1.25vw,1.5rem)] font-semibold whitespace-nowrap px-8 py-4">
+      <a href="#projetos" class="text-[clamp(1.125rem,1.25vw,1.5rem)]  whitespace-nowrap px-8 py-4 font-kabel">
         Visualizar projetos
       </a>
     </div>
@@ -75,9 +74,9 @@ import { Image } from "astro:assets";
       />
     </div>
 
-    <!-- PRINCIPAIS HABILIDADES — label (370, 861) centralizado sobre a linha (129→785) -->
+    <!-- PRINCIPAIS HABILIDADES-->
     <div class="absolute left-[6.72%] top-[79.7%] z-20 flex w-[34.2vw] flex-col items-center">
-      <p class="text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase">Principais habilidades</p>
+      <p class="text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase font-space-mono">Principais habilidades</p>
       <div class="mt-[clamp(0.5rem,1.46vw,1.55rem)] flex gap-[4.9vw]">
         <div class="aspect-[156/137] w-[8.13vw] rounded-[20px] bg-neutral"></div>
         <div class="aspect-[156/137] w-[8.13vw] rounded-[20px] bg-neutral"></div>
@@ -85,7 +84,7 @@ import { Image } from "astro:assets";
       </div>
     </div>
 
-    <!-- CONTINUE + seta — centro x≈924, label y 1016 -->
+    <!-- CONTINUE  -->
     <a href="#experiencia" class="absolute left-[48.13%] top-[93.7%] z-20 flex -translate-x-1/2 flex-col items-center gap-[6px]">
       <p class="text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase">Continue</p>
       <Image src={ArrowDown} alt="" aria-hidden="true" width={24} height={24} class="h-[clamp(18px,1.25vw,24px)] w-auto" />
@@ -94,7 +93,7 @@ import { Image } from "astro:assets";
 
   <!-- ===== Mobile: fluxo empilhado ===== -->
   <main class="flex flex-col px-6 pt-8 lg:hidden">
-    <p class="text-xs font-semibold tracking-[0.08em] uppercase font-kabel text-neutral">01/</p>
+    <p class="text-xs font-semibold tracking-[0.08em] uppercase font-space-mono text-neutral">01/</p>
     <h1 class="mt-4 font-kabel text-[2.5rem] leading-[1.2] font-bold tracking-[-0.03em] uppercase">
       Full-Stack Developer
     </h1>

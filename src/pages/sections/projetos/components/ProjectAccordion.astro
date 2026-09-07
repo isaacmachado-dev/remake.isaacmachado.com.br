@@ -1,0 +1,30 @@
+---
+import { Minus, Plus } from "lucide-react";
+
+interface Props {
+  title: string;
+  open?: boolean;
+}
+
+const { title, open = false } = Astro.props;
+---
+
+<details class="group w-[clamp(300px,30vw,400px)] mt-4" open={open}>
+  <summary class="bg-white flex flex-row text-black justify-between p-2 cursor-pointer list-none select-none items-center [&::-webkit-details-marker]:hidden">
+    <span class="font-medium">
+      {title}
+    </span>
+    <span>
+      <span class="block group-open:hidden">
+        <Plus class="w-5 h-5" />
+      </span>
+      <span class="hidden group-open:block">
+        <Minus class="w-5 h-5" />
+      </span>
+    </span>
+  </summary>
+
+  <div class="bg-white p-3 text-sm font-space-grotesk text-black">
+    <slot />
+  </div>
+</details>

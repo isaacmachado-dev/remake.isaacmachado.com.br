@@ -1,36 +1,81 @@
 ---
-import ProjectPuppyCare from "@/assets/projetos/parque-dos-bufalos.png";
-import { Image } from "astro:assets";
+import ProjectParquedosBufalos from "@/assets/projetos/parque-dos-bufalos2.png";
+import ProjectPuppyCare from "@/assets/projetos/puppycare.png";
+import ProjectAccordion from "./components/ProjectAccordion.astro";
+import ProjectFrame from "./components/ProjectFrame.astro";
 ---
 
-<section class="min-h-screen p-8">
+<section class="min-h-screen p-8 border-t-2 border-yellow-500">
 
     <div class="flex flex-col ml-[4.27%]">
-        <p class="z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase text-neutral font-kabel">
+        <p class="z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase text-neutral font-space-mono">
             02/
         </p>
         
-        <div class="flex flex flex-row gap-4">
-            <h2 class="font-display text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap font-kabel">
+        <div class="flex flex-row gap-4 items-center">
+            <h2 class="text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap font-fraunces text-white">
                 Projetos
             </h2>
             <span class="bg-white w-[80%] h-1 my-auto"></span>
         </div>
     </div>
 
-    <div class="bg-white p-10 rounded-3xl mt-10 w-fit">
-        <Image 
-            src={ProjectPuppyCare}
-            alt=""
-            width={720}
-            height={360}
-        />
+    <div class="p-16 gap-20 flex flex-col">
+        <!-- Projeto 01: items-start impede que o frame se mexa quando os accordions abrem -->
+        <div class="flex flex-row items-start">
+            <ProjectFrame 
+                imageSrc={ProjectParquedosBufalos} 
+                alt="Parque dos Búfalos" 
+                height={368} 
+            />
 
-        <span class="text-black">
-            Parque dos Bufalos
-        </span>
+            <!-- mt-10 alinha o topo do texto com o topo do ProjectFrame -->
+            <div class="ml-20">
+                <span class="text-7xl font-fraunces extrabold">01</span>
+                <h3 class="text-4xl whitespace-nowrap font-space-grotesk text-white">Parque dos Búfalos</h3>
+                <p class="text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase text-neutral font-space-mono">Website</p>
 
+                <ProjectAccordion title="Descrição">
+                    Um site para apresentar o parque e suas lutas
+                </ProjectAccordion>
+
+                <ProjectAccordion title="Minha função">
+                    Front-END, Back-END, API Instagram, deploy, hosting e entrevistador.
+                </ProjectAccordion>
+
+                <ProjectAccordion title="Código fonte">
+                    HTML, CSS, JavaScript
+                </ProjectAccordion>
+            </div>
+        </div>
+
+        <!-- Projeto 02: items-start impede que o frame se mexa quando os accordions abrem -->
+        <div class="flex flex-row items-start mt-20">
+            <!-- mt-10 alinha o topo do texto com o topo do ProjectFrame -->
+            <div class="mr-20">
+                <span class="text-7xl font-fraunces extrabold">02</span>
+                <h3 class="text-4xl whitespace-nowrap font-space-grotesk text-white">Puppy Care</h3>
+                <p class="text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase text-neutral font-space-mono">Website</p>
+
+                <ProjectAccordion title="Descrição">
+                    Um site de um petshop, com agendamento para o cliente e uma tela administrativa.
+                </ProjectAccordion>
+
+                <ProjectAccordion title="Minha função">
+                    Front-END, Back-END, WEB Design, Banco de Dados, DEV-Ops, deploy, hosting e entrevistador.
+                </ProjectAccordion>
+
+                <ProjectAccordion title="Código fonte">
+                    TypeScript, React, TailwindCSS, Next, Nest, PostgreSQL, Prisma, Docker, VPS, Nginx
+                </ProjectAccordion>
+            </div>
+
+            <ProjectFrame 
+                imageSrc={ProjectPuppyCare} 
+                alt="Puppy Care" 
+                height={360} 
+            />
+        </div>
     </div>
-
 
 </section>

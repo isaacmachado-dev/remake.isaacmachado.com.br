@@ -4,6 +4,9 @@
 @import "@fontsource/geist-mono";
 @import "@fontsource/inter";
 @import "@fontsource/gothic-a1";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource/space-mono";
 
 @font-face {
   font-family: 'Kabel';
@@ -22,6 +25,9 @@
   --font-ranade: 'Ranade', sans-serif;
   --font-sharpie: 'Sharpie', sans-serif;
   --font-kabel: 'Kabel', sans-serif;
+  --font-fraunces: 'Fraunces Variable', serif;
+  --font-space-grotesk: 'Space Grotesk Variable', sans-serif;
+  --font-space-mono: 'Space Mono', monospace;
 
   --color-primary: #100d1a;
   --color-secondary: #1b1820;
@@ -60,6 +66,22 @@ body {
 
 .font-ranade {
   font-family: var(--font-ranade);
+}
+
+.font-kabel {
+  font-family: var(--font-kabel);
+}
+
+.font-fraunces {
+  font-family: var(--font-fraunces);
+}
+
+.font-space-grotesk {
+  font-family: var(--font-space-grotesk);
+}
+
+.font-space-mono {
+  font-family: var(--font-space-mono);
 }
 
 .hero-tilt {
