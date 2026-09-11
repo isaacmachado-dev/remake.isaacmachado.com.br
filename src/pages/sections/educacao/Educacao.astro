@@ -1,0 +1,75 @@
+---
+import { Award } from "lucide-react";
+import EducacaoFrame from "./components/EducacaoFrame.astro";
+import EducacaoItem from "./components/EducacaoItem.astro";
+---
+
+<section class="min-h-screen p-8 border-t-2 border-yellow-500">
+
+    <div class="flex flex-col ml-[4.27%]">
+        <p class="z-20 text-[clamp(0.75rem,0.73vw,0.875rem)] font-semibold tracking-[0.08em] uppercase text-neutral font-space-mono">
+            03/
+        </p>
+        
+        <div class="flex flex-row gap-4 items-center">
+            <h2 class="text-[clamp(2.25rem,3.75vw,4.5rem)] leading-[1.2] font-bold tracking-[-0.03em] whitespace-nowrap font-fraunces text-white">
+                Educação
+            </h2>
+            <span class="bg-white w-[80%] h-1 my-auto"></span>
+        </div>
+    </div>
+
+    <EducacaoFrame />
+
+    <EducacaoFrame title="Cursos">                                                                                                                                      
+        
+        <EducacaoItem                                                                                                                                                     
+        title="Alura React"                                                                                                                                        
+        period="2026"
+        icon={Award}
+        />
+
+        <EducacaoItem
+        title="IBM IA & Machine learning"
+        period="2025"
+        icon={Award}
+        />
+        <EducacaoItem
+            title="QP Summit 2025"
+            period="2025"
+            icon={Award}
+        />
+
+        <EducacaoItem
+            title="Alura Cloud DEV-Ops"
+            period="2025"
+            icon={Award}
+        />
+
+        <EducacaoItem
+            title="Alura DEV Games"
+            period="2025"
+            icon={Award}
+        />
+
+        <EducacaoItem
+            title="Postman API Fundamentals Student Expert"
+            period="2025"
+            icon={Award}
+        />
+
+        <EducacaoItem
+            title="Amazon AWS Educate Introduction to Generative AI"
+            period="2025"
+            icon={Award}
+        />
+
+        <EducacaoItem
+            title="Imersão DEV Back-End"
+            period="2025"
+            icon={Award}
+        />
+
+    </EducacaoFrame>
+
+</section>

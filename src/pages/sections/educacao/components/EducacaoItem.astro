@@ -1,0 +1,40 @@
+---
+import type { ComponentType } from "react";
+import { GraduationCap } from "lucide-react";
+
+interface Props {
+    title: string;
+    subtitle?: string;
+    period: string;
+    icon?: ComponentType<{ className?: string }>;
+}
+
+const { title, subtitle, period, icon: Icon = GraduationCap } = Astro.props;
+---
+
+<div class="flex flex-row items-center gap-6">
+    <!-- Bolinha -->
+    <div class="w-6 h-6 rounded-full bg-[#d5d5d5] shrink-0 z-10"></div>
+
+    <!-- Card -->
+    <div class="bg-white p-6 rounded-md w-full max-w-lg text-ink">
+        <div class="flex flex-row gap-2 items-center">
+            <slot name="icon">
+                <Icon className="w-6 h-6" />
+            </slot>
+            <span class="font-space-grotesk font-bold text-lg">
+                {title}
+            </span>
+        </div>
+        {subtitle && (
+            <div class="ml-8 mt-1 text-sm font-space-mono text-neutral-800">
+                {subtitle}
+            </div>
+        )}
+    </div>
+
+    <!-- Ano / Período -->
+    <div class="text-white font-space-mono text-sm whitespace-nowrap">
+        {period}
+    </div>
+</div>

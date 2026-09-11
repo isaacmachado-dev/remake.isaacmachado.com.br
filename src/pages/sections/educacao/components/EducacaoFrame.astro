@@ -1,0 +1,74 @@
+---
+import type { ComponentType } from "react";
+import EducacaoItem from "./EducacaoItem.astro";
+
+export interface TimelineItem {
+    title: string;
+    subtitle?: string;
+    period: string;
+    icon?: ComponentType<{ className?: string }>;
+}
+
+interface Props {
+    title?: string;
+    items?: TimelineItem[];
+}
+
+const defaultItems: TimelineItem[] = [
+    {
+        title: "Ensino Superior",
+        subtitle: "UNIVESP — Engenharia da Computação",
+        period: "2023-2028",
+    },
+    {
+        title: "Ensino Médio",
+        period: "2020-2022",
+    },
+    {
+        title: "Ensino Fundamental",
+        period: "2010-2019",
+    },
+];
+
+const { title = "Colégio", items = defaultItems } = Astro.props;
+---
+
+<span class="flex justify-center font-space-mono">{title}</span>
+<div class="bg-[#0F0F0F] border-2 p-5">
+
+    <div class="flex flex-col relative gap-5 p-10">
+        <!-- Canto superior esquerdo -->
+        <span class="absolute top-0 left-0 w-8 h-8 border-t-8 border-l-8 border-white pointer-events-none">
+        </span>
+
+        <!-- Canto superior direito -->
+        <span class="absolute top-0 right-0 w-8 h-8 border-t-8 border-r-8 border-white pointer-events-none">
+        </span>
+
+        <!-- Canto inferior esquerdo -->
+        <span class="absolute bottom-0 left-0 w-8 h-8 border-b-8 border-l-8 border-white pointer-events-none">
+        </span>
+
+        <!-- Canto inferior direito -->
+        <span class="absolute bottom-0 right-0 w-8 h-8 border-b-8 border-r-8 border-white pointer-events-none">
+        </span>
+
+        <!-- Timeline Container com linha contínua e itens -->
+        <div class="relative flex flex-col gap-6">
+            <!-- Barra linha vertical -->
+            <div class="absolute left-3 top-10 bottom-9 w-0.5 bg-neutral -translate-x-1/2 pointer-events-none"></div>
+
+            <slot>
+                {items.map((item) => (
+                    <EducacaoItem
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        period={item.period}
+                        icon={item.icon}
+                    />
+                ))}
+            </slot>
+        </div>
+    </div>
+
+</div>
